@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/kartica"
+        android:background="#A64F4F"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kartica"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/slikaItem"
+                android:layout_width="160dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/profilOkusaItem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/nazivItem"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/naziv_biljke"
+                app:layout_constraintBottom_toTopOf="@+id/profilOkusaItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/slikaItem"
+                app:layout_constraintTop_toTopOf="@id/slikaItem" />
+
+            <TextView
+                android:id="@+id/profilOkusaItem"
+                android:layout_marginEnd="5dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/profil_okusa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/slikaItem"
+                app:layout_constraintTop_toBottomOf="@id/nazivItem"
+                app:layout_constraintBottom_toTopOf="@id/jelo2Item" />
+
+            <TextView
+                android:id="@+id/jelo1Item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/jelo_1"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toEndOf="@id/slikaItem"
+                app:layout_constraintEnd_toStartOf="@id/jelo2Item"
+                app:layout_constraintTop_toBottomOf="@id/profilOkusaItem"
+                app:layout_constraintBottom_toBottomOf="@id/slikaItem"/>
+
+            <TextView
+                android:id="@+id/jelo2Item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/jelo_2"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toEndOf="@id/jelo1Item"
+                app:layout_constraintEnd_toStartOf="@id/jelo3Item"
+                app:layout_constraintTop_toBottomOf="@id/profilOkusaItem"
+                app:layout_constraintBottom_toBottomOf="@id/slikaItem" />
+
+            <TextView
+                android:id="@+id/jelo3Item"
+                android:layout_width="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="0dp"
+                android:text="@string/jelo_3"
+                app:layout_constraintStart_toEndOf="@id/jelo2Item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profilOkusaItem"
+                app:layout_constraintBottom_toBottomOf="@id/slikaItem"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
